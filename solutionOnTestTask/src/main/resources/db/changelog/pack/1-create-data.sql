@@ -21,3 +21,5 @@ VALUES('346497e1-5be3-4058-88f2-067815ce5ae8', 0);
 INSERT INTO wallet
 (id, balance)
 VALUES('fb78cfdd-0973-4e04-b330-9f0ad254b4d2', 75455522);
+
+BEGIN isolation level repeatable read;

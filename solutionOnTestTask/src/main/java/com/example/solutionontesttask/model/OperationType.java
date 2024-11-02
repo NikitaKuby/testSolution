@@ -1,6 +1,5 @@
 package com.example.solutionontesttask.model;
 
-import lombok.Data;
 import lombok.Getter;
 
 @Getter
