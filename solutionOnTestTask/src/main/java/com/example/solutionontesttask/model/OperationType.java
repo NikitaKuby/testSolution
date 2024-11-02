@@ -5,11 +5,11 @@ import lombok.Getter;
 
 @Getter
 public enum OperationType {
-    DEPOSIT("DEPOSIT"),
-    WITHDRAW("WITHDRAW");
+    DEPOSIT(1),
+    WITHDRAW(2);
 
-    private String title;
-    OperationType(String title) {
+    final private Integer title;
+    OperationType(Integer title) {
         this.title=title;
     }
 }

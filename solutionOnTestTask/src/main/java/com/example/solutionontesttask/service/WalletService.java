@@ -1,13 +1,13 @@
 package com.example.solutionontesttask.service;
 
-import com.example.solutionontesttask.model.UpdateWalletDto;
-import com.example.solutionontesttask.model.Wallet;
+import com.example.solutionontesttask.dto.UpdateWalletDto;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 public interface WalletService {
-    Long findBalanceByUuid(UUID uuid);
+    Long findBalanceById(UUID uuid);
 
-    String updateWallet(UpdateWalletDto walletDto);
+    void updateWallet(UpdateWalletDto walletDto);
 
 }

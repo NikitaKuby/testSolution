@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+
+  client-backend:
+    image: client:0.0.2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8181:8181"
+    depends_on:
+      - wallet_db
+    environment:
+      - SERVER_PORT= 8181
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://wallet_db/wallet_dt
+
+  wallet_db:
+    image: postgres:14.7-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Legosi
+      POSTGRES_DB: wallet_dt
+    ports:
+      - "5432:5432"
+    restart: always
+
